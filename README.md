@@ -2,7 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/brunomvsouza/ynab.go)](https://goreportcard.com/report/github.com/brunomvsouza/ynab.go) [![GoDoc Reference](https://godoc.org/github.com/brunomvsouza/ynab.go?status.svg)](https://godoc.org/github.com/brunomvsouza/ynab.go)
 
-This is an UNOFFICIAL Go client for the YNAB API. It covers 100% of the resources made available by the [YNAB API](https://api.youneedabudget.com).
+This is an UNOFFICIAL Go client for the YNAB API. It covers 100% of the resources made available by the [YNAB API](https://api.ynab.com).
 
 ## Installation
 
@@ -12,7 +12,7 @@ go get github.com/brunomvsouza/ynab.go
 
 ## Usage
 
-To use this client you must [obtain an access token](https://api.youneedabudget.com/#authentication-overview) from your [My Account](https://app.youneedabudget.com/settings) page of the YNAB web app.
+To use this client you must [obtain an access token](https://api.ynab.com/#authentication-overview) from your [My Account](https://app.youneedabudget.com/settings) page of the YNAB web app.
 
 ```go
 package main

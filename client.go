@@ -24,7 +24,7 @@ import (
 	"github.com/brunomvsouza/ynab.go/api/user"
 )
 
-const apiEndpoint = "https://api.youneedabudget.com/v1"
+const apiEndpoint = "https://api.ynab.com/v1"
 
 // ClientServicer contract for a client service API
 type ClientServicer interface {
@@ -60,7 +60,7 @@ type client struct {
 
 	accessToken string
 
-	client    *http.Client
+	client *http.Client
 
 	user        *user.Service
 	budget      *budget.Service
@@ -165,7 +165,7 @@ func (c *client) do(method, url string, responseModel interface{}, requestBody [
 			// returns a forged *api.Error fore ease of use
 			// because either the response body is empty or the response is
 			// non compliant with YNAB's API specification
-			// https://api.youneedabudget.com/#errors
+			// https://api.ynab.com/#errors
 			apiError := &api.Error{
 				ID:     strconv.Itoa(res.StatusCode),
 				Name:   "unknown_api_error",

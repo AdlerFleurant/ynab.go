@@ -21,7 +21,7 @@ func TestService_GetTransactions(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -117,7 +117,7 @@ func TestService_GetTransaction(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/e6ad88f5-6f16-4480-9515-5377012750dd"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/e6ad88f5-6f16-4480-9515-5377012750dd"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -212,7 +212,7 @@ func TestService_GetTransactionsByAccount(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/accounts/09eaca5e-6f16-4480-9515-828fb90638f2/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/accounts/09eaca5e-6f16-4480-9515-828fb90638f2/transactions"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -312,7 +312,7 @@ func TestService_GetTransactionsByCategory(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/categories/a33c906e-444c-469c-be27-04c8e0c9959f/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/categories/a33c906e-444c-469c-be27-04c8e0c9959f/transactions"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -388,7 +388,7 @@ func TestService_GetTransactionsByPayee(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/payees/b391144e-444c-469c-be27-fed6aa352a7a/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/payees/b391144e-444c-469c-be27-fed6aa352a7a/transactions"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -464,7 +464,7 @@ func TestService_GetScheduledTransactions(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/scheduled_transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/scheduled_transactions"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -537,7 +537,7 @@ func TestService_GetScheduledTransaction(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/scheduled_transactions/56f4fc86-2ed7-4b3b-9116-7a214261b3cd"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/scheduled_transactions/56f4fc86-2ed7-4b3b-9116-7a214261b3cd"
 	httpmock.RegisterResponder(http.MethodGet, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{
@@ -630,7 +630,7 @@ func TestService_CreateTransaction(t *testing.T) {
 		FlagColor:  &payloadFlagColor,
 	}
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
 	httpmock.RegisterResponder(http.MethodPost, url,
 		func(req *http.Request) (*http.Response, error) {
 			resModel := struct {
@@ -741,7 +741,7 @@ func TestService_CreateTransactions(t *testing.T) {
 		},
 	}
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
 	httpmock.RegisterResponder(http.MethodPost, url,
 		func(req *http.Request) (*http.Response, error) {
 			resModel := struct {
@@ -895,7 +895,7 @@ func TestService_UpdateTransactions(t *testing.T) {
 		},
 	}
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions"
 	httpmock.RegisterResponder(http.MethodPatch, url,
 		func(req *http.Request) (*http.Response, error) {
 			resModel := struct {
@@ -1050,7 +1050,7 @@ func TestService_BulkCreateTransactions(t *testing.T) {
 		},
 	}
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/bulk"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/bulk"
 	httpmock.RegisterResponder(http.MethodPost, url,
 		func(req *http.Request) (*http.Response, error) {
 			resModel := struct {
@@ -1112,7 +1112,7 @@ func TestService_UpdateTransaction(t *testing.T) {
 		FlagColor:  nil,
 	}
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/0f5b3f73-ded2-4dd7-8b01-c23022622cd6"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/0f5b3f73-ded2-4dd7-8b01-c23022622cd6"
 	httpmock.RegisterResponder(http.MethodPut, url,
 		func(req *http.Request) (*http.Response, error) {
 			resModel := struct {
@@ -1182,7 +1182,7 @@ func TestService_DeleteTransaction(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.DeactivateAndReset()
 
-	url := "https://api.youneedabudget.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/e6ad88f5-6f16-4480-9515-5377012750dd"
+	url := "https://api.ynab.com/v1/budgets/aa248caa-eed7-4575-a990-717386438d2c/transactions/e6ad88f5-6f16-4480-9515-5377012750dd"
 	httpmock.RegisterResponder(http.MethodDelete, url,
 		func(req *http.Request) (*http.Response, error) {
 			res := httpmock.NewStringResponse(200, `{

@@ -21,7 +21,7 @@ type Service struct {
 }
 
 // GetAccounts fetches the list of accounts from a budget
-// https://api.youneedabudget.com/v1#/Accounts/getAccounts
+// https://api.ynab.com/v1#/Accounts/getAccounts
 func (s *Service) GetAccounts(budgetID string, f *api.Filter) (*SearchResultSnapshot, error) {
 	resModel := struct {
 		Data struct {
@@ -45,7 +45,7 @@ func (s *Service) GetAccounts(budgetID string, f *api.Filter) (*SearchResultSnap
 }
 
 // GetAccount fetches a specific account from a budget
-// https://api.youneedabudget.com/v1#/Accounts/getAccountById
+// https://api.ynab.com/v1#/Accounts/getAccountById
 func (s *Service) GetAccount(budgetID, accountID string) (*Account, error) {
 	resModel := struct {
 		Data struct {

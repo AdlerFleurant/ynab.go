@@ -21,7 +21,7 @@ type Service struct {
 }
 
 // GetPayees fetches the list of payees from a budget
-// https://api.youneedabudget.com/v1#/Payees/getPayees
+// https://api.ynab.com/v1#/Payees/getPayees
 func (s *Service) GetPayees(budgetID string, f *api.Filter) (*SearchResultSnapshot, error) {
 	resModel := struct {
 		Data struct {
@@ -45,7 +45,7 @@ func (s *Service) GetPayees(budgetID string, f *api.Filter) (*SearchResultSnapsh
 }
 
 // GetPayee fetches a specific payee from a budget
-// https://api.youneedabudget.com/v1#/Payees/getPayeeById
+// https://api.ynab.com/v1#/Payees/getPayeeById
 func (s *Service) GetPayee(budgetID, payeeID string) (*Payee, error) {
 	resModel := struct {
 		Data struct {
@@ -61,7 +61,7 @@ func (s *Service) GetPayee(budgetID, payeeID string) (*Payee, error) {
 }
 
 // GetPayeeLocations fetches the list of payee locations from a budget
-// https://api.youneedabudget.com/v1#/Payee_Locations/getPayeeLocations
+// https://api.ynab.com/v1#/Payee_Locations/getPayeeLocations
 func (s *Service) GetPayeeLocations(budgetID string) ([]*Location, error) {
 	resModel := struct {
 		Data struct {
@@ -77,7 +77,7 @@ func (s *Service) GetPayeeLocations(budgetID string) ([]*Location, error) {
 }
 
 // GetPayeeLocation fetches a specific payee location from a budget
-// https://api.youneedabudget.com/v1#/Payee_Locations/getPayeeLocationById
+// https://api.ynab.com/v1#/Payee_Locations/getPayeeLocationById
 func (s *Service) GetPayeeLocation(budgetID, payeeLocationID string) (*Location, error) {
 	resModel := struct {
 		Data struct {
@@ -93,7 +93,7 @@ func (s *Service) GetPayeeLocation(budgetID, payeeLocationID string) (*Location,
 }
 
 // GetPayeeLocationsByPayee fetches the list of locations of a specific payee from a budget
-// https://api.youneedabudget.com/v1#/Payee_Locations/getPayeeLocationsByPayee
+// https://api.ynab.com/v1#/Payee_Locations/getPayeeLocationsByPayee
 func (s *Service) GetPayeeLocationsByPayee(budgetID, payeeID string) ([]*Location, error) {
 	resModel := struct {
 		Data struct {
